@@ -1,0 +1,35 @@
+<!-- write the code to insert any new element using javascript into the html. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Element with JavaScript</title>
+</head>
+<body>
+
+<h2>Original Content</h2>
+<div id="originalContent">
+    <!-- Original content here -->
+</div>
+
+<script>
+    // Create a new element
+    var newElement = document.createElement("p");
+    
+    // Create text node for the new element
+    var textNode = document.createTextNode("This is a new paragraph.");
+
+    // Append the text node to the new element
+    newElement.appendChild(textNode);
+
+    // Find the parent element where you want to insert the new element
+    var parentElement = document.getElementById("originalContent");
+
+    // Insert the new element before the first child of the parent element
+    parentElement.insertBefore(newElement, parentElement.firstChild);
+</script>
+
+</body>
+</html>
